@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Befreiung</title>
+<link rel="stylesheet" href="befreiung.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="top-line"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="befreiung.html" class="active">Die Befreiung</a></li>
+            <li><a href="der-holocaust-und-ich.html">Der Holocaust und ich</a></li>
+            <li><a href="gedenkstaetten.html">Gedenkstätte</a></li>
+            <li><a href="mitmachen.html">Mitmachen</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="overlay">
+  <div class="overlay-box">
+    <p>Hinweis: Dieses Video geht 1:32 min und dient als optionales Vorwissen. Bitte klicke auf "Video auf YouTube ansehen". Weniger Zeit oder keine Lust ein Video anzuschauen? Dann scrolle einfach nach unten zu unserem Informationstext.</p>
+    <button onclick="startVideo()">OK</button>
+  </div>
+</div>
+
+<section class="hero">
+  <!-- YouTube iframe: starten erst nach Klick auf OK -->
+  <iframe id="video" style="display:none;"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+  </iframe>
+</section>
+
+<script>
+  const youtubeURL = "https://www.youtube.com/embed/QDSx5RR-1t4?autoplay=1&mute=1";
+
+  function startVideo() {
+    document.getElementById("overlay").style.display = "none";
+    const iframe = document.getElementById("video");
+    iframe.src = youtubeURL;  // setzt src erst jetzt → Autoplay funktioniert
+    iframe.style.display = "block";
+  }
+
+  function toggleSound() {
+    alert("Tonsteuerung funktioniert nur über die YouTube API, standardmäßig stumm.");
+  }
+</script>
+
+<section id="befreiung">
+  <h1>Die Befreiung am 27. Januar 1945</h1>
+
+  <p>Am 27. Januar 1945 erreichten Soldaten der Roten Armee das Konzentrations- und Vernichtungslager Auschwitz-Birkenau und befreiten die dort verbliebenen Häftlinge. Dieses Ereignis wird als Befreiung von Auschwitz bezeichnet und gilt als ein zentraler Moment am Ende des Zweiten Weltkriegs in Europa.</p>
+
+  <p>In den Tagen zuvor hatten die Nationalsozialisten versucht, ihre Verbrechen zu verbergen. Sie zerstörten Teile der Gaskammern und Krematorien und zwangen zehntausende Häftlinge, das Lager zu verlassen und bei eisigen Temperaturen zu Fuß in Richtung Westen zu marschieren. Diese sogenannten Todesmärsche kosteten vielen Menschen das Leben, da sie erschöpft waren, kaum Nahrung hatten und von Wachmannschaften brutal behandelt wurden.</p>
+
+  <p>Als die sowjetischen Soldaten das Lager erreichten, fanden sie etwa 7.000 Überlebende vor, darunter viele Kinder. Die meisten waren schwer krank, unterernährt und völlig entkräftet. Sie litten an Krankheiten, Verletzungen und den Folgen jahrelanger Misshandlung. Die Soldaten und medizinisches Personal versuchten sofort zu helfen, obwohl die Versorgungslage schwierig war.</p>
+
+  <p>Im Lager entdeckten die Befreier außerdem große Mengen an zurückgelassenen Gegenständen: Hunderttausende Kleidungsstücke, Koffer, Brillen und sogar abgeschnittene Haare. Diese Funde zeigten das enorme Ausmaß der systematischen Verfolgung und Ermordung von Menschen, vor allem von Juden, aber auch von anderen Opfergruppen wie Sinti und Roma, politischen Gegnern und Kriegsgefangenen.</p>
+
+  <p>Die Befreiung von Auschwitz machte der Welt deutlich, welche Verbrechen im Nationalsozialismus begangen worden waren. Der 27. Januar ist deshalb heute ein internationaler Gedenktag. In Deutschland wird er als Tag des Gedenkens an die Opfer des Nationalsozialismus begangen und erinnert daran, wie wichtig es ist, die Geschichte zu kennen und aus ihr zu lernen, damit sich solche Verbrechen nicht wiederholen.</p>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+

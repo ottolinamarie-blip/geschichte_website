@@ -1,0 +1,215 @@
+/* Grundstil */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fraunces', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation wie auf Startseite */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding: 20px 40px; 
+    border-bottom: 1px solid #ccc;
+    position: fixed;      
+    top: 0;
+    width: 100%;          
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #000000;
+    border: 2px solid #000000;
+    background-color: transparent;
+}
+
+/* ==============================
+   Zitat Carousel
+============================== */
+#quote-carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Großes Zitat fast bildschirmfüllend */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+#quote-carousel .quote {
+    position: absolute;
+    font-size: 2.5rem; /* sehr groß */
+    font-weight: bold;
+    color: #111;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    max-width: 80%;
+}
+
+#quote-carousel .quote.active {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #quote-carousel .quote {
+        font-size: 1.8rem;
+    }
+}
+
+#quote-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;          /* Gesamtbereich */
+    display: flex;
+    flex-direction: column; /* Überschrift oben, Zitate unten */
+    align-items: center;
+    padding-top: 40px;     /* Platz oben */
+    text-align: center;
+    overflow: hidden;
+}
+
+#quote-title {
+    font-size: 4rem;       /* sehr groß */
+    font-weight: bold;
+    margin: 0;             /* enger am oberen Rand */
+    color: #111;
+}
+
+#quote-carousel {
+    position: relative;
+    flex: 1;                /* nimmt den restlichen Platz ein */
+    display: flex;
+    justify-content: center;
+    align-items: center;    /* Zitate vertikal mittig im restlichen Bereich */
+    width: 100%;
+    overflow: hidden;
+}
+
+#quote-carousel .quote {
+    position: absolute;
+    font-size: 2.5rem;      /* sehr groß */
+    font-weight: bold;
+    color: #111;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    max-width: 80%;
+}
+
+#quote-carousel .quote.active {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #quote-title {
+        font-size: 2.5rem;
+    }
+    #quote-carousel .quote {
+        font-size: 1.8rem;
+    }
+}
+
+#quote-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;           /* Gesamtbereich */
+    display: flex;
+    flex-direction: column; /* Überschrift oben, Carousel darunter */
+    align-items: center;
+    padding-top: 100px;      /* Platz oben */
+    text-align: center;
+    overflow: hidden;
+}
+
+#quote-title {
+    font-size: 4rem;       /* sehr groß */
+    font-weight: bold;
+    margin-bottom: 20px;   /* Abstand zu den Zitaten */
+    color: #111;
+}
+
+#quote-carousel {
+    position: relative;
+    flex: 1;                /* nimmt den restlichen Platz ein */
+    display: flex;
+    justify-content: center;
+    align-items: center;    /* Zitate vertikal mittig im restlichen Bereich */
+    width: 100%;
+    overflow: hidden;
+}
+
+#margot-section {
+    max-width: 900px;
+    margin: 60px auto 80px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.95); /* leichter weißer Hintergrund für gute Lesbarkeit */
+    border-radius: 10px;
+}
+
+#margot-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #111;
+}
+
+#margot-section p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #margot-title {
+        font-size: 1.8rem;
+    }
+    #margot-section p {
+        font-size: 1rem;
+    }
+}
+
+#margot-video {
+    max-width: 900px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+}
+
+#margot-video iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

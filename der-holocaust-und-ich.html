@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Holocaust und ich</title>
+    <link rel="stylesheet" href="der-holocaust-und-ich.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="der-holocaust-und-ich.css">
+</head>
+<body>
+
+<!-- Navigation wie auf der Startseite -->
+<header>
+    <div class="top-line"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="befreiung.html">Die Befreiung</a></li>
+            <li><a href="der-holocaust-und-ich.html" class="active">Der Holocaust und ich</a></li>
+            <li><a href="gedenkstaetten.html">Gedenkstätte</a></li>
+            <li><a href="mitmachen.html">Mitmachen</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="quote-section">
+    <h1 id="quote-title">Zitate-Rotator:</h1>
+    <h2>Zitate von Zeitzeugen:</h2>
+    <div id="quote-carousel">
+        <div class="quote active">„Mein Wunsch ist es, dass wir alle beten, dass sich diese schreckliche Tragödie in der Welt, in der ungefähr 50 Millionen Menschen gestorben sind, niemals wiederholt und dass Gott in unsere Herzen kommt und wir Gottes Frieden empfangen, nicht den weltlichen Frieden.“ – Nick Hope</div>
+        <div class="quote">„Nach all dem unermesslichen Leid, welches für die meisten mit dem Tod in den Gaskammern ein Ende fand, gaben mir die Amerikaner mit der Befreiung die Hoffnung auf eine verloren geglaubte Zukunft ausserhalb dieses Leids und Elends zurück.“ – Eduard Kornfeld</div>
+        <div class="quote">„Mit 17 Jahren war ich völlig verwaist, verwirrt, in Todesangst, umgeben von brutalen Nazi SS-Männern mit Maschinengewehren und bösartigen Deutschen Schäferhunden, die jederzeit bereit waren, mich zu zerreißen.“ – David Lenga</div>
+        <div class="quote">„Solch eine Situation darf es nie wieder geben.“ – Jerzy Leśniak</div>
+        <div class="quote">„Wir waren kaum noch am Leben. Wir schleppten uns vorwärts, auf unseren Händen und Knien kriechend, um die Füße der amerikanischen G.I.s zu küssen, die uns Überlebenden wie Götter erschienen.“ – Ben Lesser</div>
+        <div class="quote">„Ich bin dankbar, dass mir die Gelegenheit gegeben wird, über das damalige Geschehen in den Schulen zu sprechen. Den jungen Leuten bewusst zu machen, wie schrecklich die Zeit damals war und dass so eine Grausamkeit nie wieder geschehen darf.“ – Abba Naor</div>
+        <div class="quote">„Wegen des Krieges ist mir klar geworden, was Redefreiheit bedeutet, die Gefahr einer Diktatur und der Ausgrenzung von Menschen.“ – Willemijn Petroff-van Gurp</div>
+        <div class="quote">„Was wir in den Lagern erleiden mussten, war eine unerträgliche Tragödie für die Menschheit. Es ist mein inniger Wunsch und mein Wille, dass die ganze Weltbevölkerung weiß, was wir damals ertragen mussten.“ – Lucy Salani</div>
+        <div class="quote">„Ich hatte Fleckfieber und war dem Sterben nahe. Die Befreiung hätte keinen Tag später stattfinden dürfen, denn dann hätte ich nicht überlebt.“ – Henk van de Water</div>
+    </div>
+</section>
+
+<script>
+const quotes = document.querySelectorAll('#quote-carousel .quote');
+let current = 0;
+const displayTime = 4000; // Zeit jedes Zitats sichtbar (ms)
+const fadeTime = 2000;    // Dauer des Ein-/Ausblendens (ms)
+
+function showNextQuote() {
+    // Aktuelles Zitat ausblenden
+    quotes[current].classList.remove('active');
+
+    // Nächstes Zitat
+    current = (current + 1) % quotes.length;
+
+    // Nächstes Zitat einblenden
+    quotes[current].classList.add('active');
+}
+
+// Starte das Wechseln automatisch
+setInterval(showNextQuote, displayTime + fadeTime);
+</script>
+
+<section id="margot-section">
+    <h2 id="margot-title">Erinnerung am Leben im Krieg von Margot Friedländer:</h2>
+    <p>
+        Margot Friedländer wuchs als Jüdin in Berlin auf und erlebte den Nationalsozialismus und den Zweiten Weltkrieg aus nächster Nähe. Schon früh wurden ihr und ihrer Familie durch die antisemitischen Gesetze und Maßnahmen die Lebensmöglichkeiten stark eingeschränkt. Ihre Eltern trennten sich mehrfach, und Margot musste mit Mutter und Bruder oft umziehen. 1937 zog sie in eine jüdische Pension, wo sie die Novemberpogrome 1938 miterlebte. Kurz darauf mussten sie die Pension verlassen und zogen zu ihrer Großmutter.
+    </p>
+
+    <p>
+        Margot begann eine Ausbildung in einer Schneiderei und besuchte eine Modeschule, doch nach der „Kristallnacht“ verlor sie ihre Anstellung, und ihre beruflichen Pläne wurden zerstört. Sie arbeitete später im Kulturbund und wurde schließlich zur Zwangsarbeit in einer Fabrik in Berlin-Kreuzberg verpflichtet, wo sie Metallteile für die Rüstungsindustrie herstellen musste. Nach der Deportation ihrer Mutter und ihres Bruders ging sie unter, versteckte sich und überlebte so die NS-Zeit. Schließlich wurde sie nach Theresienstadt gebracht, wo sie die Befreiung erlebte.
+    </p>
+
+    <p>
+        Nach dem Krieg heiratete Margot und wanderte 1946 mit ihrem Mann nach New York aus. Ihre Kriegserfahrungen waren geprägt von Angst, Verlust und ständiger Bedrohung, aber auch von der Notwendigkeit, ums Überleben zu kämpfen. Später trug sie die Verantwortung, die Geschichten derer weiterzuerzählen, die diese Zeit nicht überlebt hatten.
+    </p>
+</section>
+
+<section id="margot-video">
+    <h1>Weitere Berichte der Zeitzeugen:</h1>
+    <h3>Hinweis: Klicke auf "Video auf YouTube ansehen" um das Video zu starten.</h3>
+  <iframe 
+    id="margotYouTube"
+    width="100%" 
+    height="500" 
+    src="https://www.youtube.com/embed/uGl5bO6655M?autoplay=1&mute=1&enablejsapi=1"
+    title="YouTube Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const ytFrame = document.getElementById('margotYouTube');
+    ytFrame.style.opacity = 0;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                ytFrame.style.transition = "opacity 1s";
+                ytFrame.style.opacity = 1;
+                observer.unobserve(ytFrame);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(ytFrame);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitmachen</title>
+    <link rel="stylesheet" href="mitmachen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation wie auf der Startseite -->
+<header>
+    <div class="top-line"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="geschichte.html">Geschichte</a></li>
+            <li><a href="befreiung.html">Die Befreiung</a></li>
+            <li><a href="der-holocaust-und-ich.html">Der Holocaust und ich</a></li>
+            <li><a href="gedenkstaetten.html">Gedenkstätte</a></li>
+            <li><a href="mitmachen.html" class="active">Mitmachen</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="mitmachen-section">
+    <h1>Die kleine Denkanregung</h1>
+
+    <div class="form-group">
+        <label for="text1">Was sind deine Gedanken bezüglich des 27. Januars?</label>
+        <textarea id="text1" placeholder="Hier deine Gedanken eintragen..."></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="text2">Was nimmst du von unserer Website an Wissen und Gedanken mit?</label>
+        <textarea id="text2" placeholder="Hier dein Wissen und deine Gedanken eintragen..."></textarea>
+    </div>
+
+     <div class="form-group">
+        <label for="text2">Wie kannst du dich selbst am 27. Januar beteiligen?</label>
+        <textarea id="text3" placeholder="Hier deine Ideen eintragen..."></textarea>
+    </div>
+
+    <button id="submitBtn">Fertig</button>
+
+    <p id="thankMessage"></p>
+</section>
+
+<script>
+const submitBtn = document.getElementById('submitBtn');
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
+const thankMessage = document.getElementById('thankMessage');
+
+submitBtn.addEventListener('click', () => {
+    // Zeige Dankesnachricht
+    thankMessage.textContent = "Es ist schön, dass du deine Gedanken geteilt hast. Jeder Beitrag hilft, das Thema lebendig zu halten.";
+    thankMessage.style.color = "green";
+
+    // Leere die Textfelder
+    text1.value = "";
+    text2.value = "";
+    text3.value = "";
+});
+</script>
+
+<section id="ideen-section">
+    <h2>Kleine Ideen zur Beteiligung am 27. Januar:</h2>
+    <ul class="ideen-list">
+        <li>Kerze anzünden und kurz innehalten</li>
+        <li>Ein Buch oder Bericht über den Holocaust lesen</li>
+        <li>Mit Freunden oder Familie über die Geschichte sprechen</li>
+        <li>Eine Gedenkstätte online besuchen oder vor Ort</li>
+        <li>Ein Blumenstrauß oder eine Blume auf einem Gedenkstein oder einer Gedenkstätte ablegen</li>
+        <li>An Gedenkveranstaltungen teilnehmen</li>
+    </ul>
+</section>
+
+    
+</body>
+</html>

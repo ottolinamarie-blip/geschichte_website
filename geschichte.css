@@ -1,0 +1,133 @@
+/* Grundstil */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fraunces', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation wie auf Startseite */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding: 20px 40px; 
+    border-bottom: 1px solid #ccc;
+    position: fixed;      
+    top: 0;
+    width: 100%;          
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #000000;
+    border: 2px solid #000000;
+    background-color: transparent;
+}
+
+/* Timeline */
+#timeline {
+    max-width: 900px;
+    margin: 140px auto 60px auto; /* Oben Platz für fixe Nav */
+    padding: 0 20px;
+}
+
+#timeline h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+/* Container für alle Einträge */
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #333; /* vertikale Linie */
+}
+
+/* Jeder Timeline-Eintrag */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Punkt auf der Linie */
+.timeline-dot {
+    position: absolute;
+    left: -12px; 
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 0;
+}
+
+/* Inhalt rechts von der Linie */
+.timeline-content {
+    margin-left: 40px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #timeline {
+        margin-top: 120px; /* weniger Platz oben */
+    }
+    .timeline-container {
+        padding-left: 20px;
+    }
+    .timeline-content {
+        margin-left: 35px;
+    }
+    .timeline-content h2 {
+        font-size: 20px;
+    }
+    .timeline-content p {
+        font-size: 14px;
+    }
+}
+
+.timeline-content img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+}

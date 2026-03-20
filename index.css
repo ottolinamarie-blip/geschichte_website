@@ -1,0 +1,371 @@
+/* Grundstil */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* vorher #f4f4f4, jetzt weiß */
+    color: #333;
+}
+
+/* Sections unter dem Hero-Bereich */
+section {
+    padding: 60px 20px;
+    max-width: 900px; 
+    margin: auto;
+    background-color: white; /* sicherstellen, dass sie weiß sind */
+}
+
+/* Navigation */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding: 20px 40px; 
+    border-bottom: 1px solid #ccc;
+    position: fixed;      /* bleibt beim Scrollen oben */
+    top: 0;
+    width: 100%;          /* volle Breite */
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+/* Navigation Buttons – gleiche Schriftart wie auf Geschichte-Seite */
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;               /* fett */
+    font-family: 'Fraunces', serif; /* gleiche Schriftart wie auf Geschichte-Seite */
+    font-size: 16px;                /* gleiche Größe wie auf Geschichte-Seite */
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+/* Hover-Effekt identisch wie auf Geschichte-Seite */
+header nav ul li a:hover {
+    color: #000;
+    border: 2px solid #000;
+    background-color: transparent;
+}
+
+/* Hero-Bereich Startseite */
+#startseite {
+    max-width: none;   /* keine Breitenbeschränkung */
+    width: 100%;       /* gesamte Bildschirmbreite */
+    padding: 0;
+    margin: 0;
+    position: relative; /* für Text über Bild */
+    margin-top: 70px;   /* Platz für fixe Navigation */
+}
+
+/* Hero-Bereich */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero-Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+}
+
+/* Überschrift */
+.hero-text h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 220px;
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Unterüberschrift */
+.hero-text h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Abschnitt unter Hero */
+#intro-text {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+#intro-text .text-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+#intro-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Abschnitte unter dem Bild */
+section {
+    padding: 60px 20px;
+    max-width: 900px; /* zentriert für andere Abschnitte */
+    margin: auto;
+}
+
+section h1, section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Unterschiedliche Hintergrundfarben für Abschnitte */
+#geschichte { background-color: #e8f5e9; }
+#zeitzeugen { background-color: #f4f4f4; }
+#gedenkstaette { background-color: #e8f5e9; }
+#mitmachen { background-color: #f4f4f4; }
+
+/* Hero-Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Höhe des Hero-Bereichs */
+}
+
+/* Hintergrundbild */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* füllt Container ohne Verzerrung */
+    z-index: 1;
+}
+
+/* Overlay-Frau */
+.overlay-frau {
+    position: absolute;
+    bottom: 0;         /* unten im Hero-Bereich */
+    left: 50%;         /* horizontal zentriert */
+    transform: translateX(-50%);
+    max-height: 80%;   /* passt sich proportional an */
+    width: auto;
+    z-index: 2;        /* über Hintergrundbild */
+}
+
+/* Text über allem */
+.hero-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;        /* ganz oben */
+}
+
+/* Google Font einbinden */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Überschrift hero-text – schnörkelig, sehr groß, rechtsbündig */
+.hero-text h1 {
+    font-family: 'Great Vibes', cursive !important;  /* schnörkelige Schreibschrift */
+    font-size: 220px !important;                     /* extrem groß */
+    text-align: right !important;                    /* rechtsbündig */
+    margin: 0 40px 20px 0 !important;
+    line-height: 1 !important;
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7) !important; /* Lesbarkeit */
+    white-space: nowrap !important;                  /* verhindert Zeilenumbruch */
+}
+
+/* Unterüberschrift – Fraunces, absolut positioniert unter 27. Januar */
+.hero-text h2 {
+    font-family: 'Fraunces', serif !important;
+    font-weight: 700;
+    font-size: 36px;
+    position: absolute;          /* ermöglicht freie Platzierung */
+    top: 250px;                  /* Abstand von oben (unter h1) */
+    right: 40px;                 /* Abstand vom rechten Rand */
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Hero-Container Positionierung */
+.hero-container {
+    position: relative;          /* notwendig für absolute Position von h2 */
+}
+
+/* Responsive Anpassung */
+@media (max-width: 1200px) {
+    .hero-text h1 { font-size: 160px !important; }
+    .hero-text h2 { font-size: 28px; }
+}
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 100px !important; }
+    .hero-text h2 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+    .hero-text h1 { font-size: 70px !important; }
+    .hero-text h2 { font-size: 18px; }
+}
+
+/* Abschnitt unter dem Hero */
+#intro-text {
+    background-color: white;   /* weißer Hintergrund */
+    padding: 60px 20px;
+}
+
+#intro-text .text-container {
+    max-width: 900px;         /* zentrierter Inhalt */
+    margin: auto;
+    text-align: center;
+}
+
+#intro-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Slider für Fakten */
+#fakten-slider {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* sorgt dafür, dass die Karten „einrasten“ */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling auf iOS */
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.slider-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+/* Überschrift für den Fakten Slider */
+.slider-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+    font-family: 'Fraunces', serif; /* passt zu deiner Unterüberschrift im Hero */
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.fact-card {
+    flex: 0 0 250px; /* Breite der Karte */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    scroll-snap-align: start; /* „einrasten“ beim scrollen */
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .fact-card { flex: 0 0 200px; font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+    .fact-card { flex: 0 0 160px; font-size: 13px; }
+}
+
+/* Initiator-Abschnitt – Schwarz, volle Breite, kompakter */
+#initiator {
+    background-color: #000;
+    color: #fff;
+    padding-top: 3px;       /* oben noch genug Luft */
+    padding-bottom: 40px;    /* unten minimal, Abschnitt endet nahe Text */
+    margin-top: 60px;
+    width: 100vw;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Container – Abstand zwischen Bild und Text minimal */
+.initiator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px; /* vorher 20px – jetzt weniger Abstand */
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Text unter dem Bild – kein extra margin unten */
+.initiator-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 700px;
+    text-align: center;
+    margin: 0; /* verhindert zusätzlichen Abstand nach unten */
+}
+
+#initiator h2 {
+    font-size: 100px;
+    margin-bottom: 30px;
+    font-family: 'Fraunces', serif;
+    color: #fff;              /* Überschrift weiß */
+}
+
+
+
+.initiator-container img { 
+    max-width: 250px; 
+    height: auto; 
+}
+
+
+
+
